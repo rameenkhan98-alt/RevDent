@@ -267,35 +267,35 @@ function readImg(file, max = 2400) {
 
 /* ============================ styles ============================ */
 const css = `
-:root{--bg:#f3f6f5;--fg:#14211f;--card:#fff;--line:#dbe5e3;--line2:#e5eeec;--inp:#c5d3d0;--pri:#0f766e;--acc:#0f766e;--navbg:#0f766e;--navfg:#d6f1ec;--muted:#5c7a75;--label:#43605b;--tagbg:#e5eeec;--tagfg:#33524d;--gbg:#dcfce7;--gfg:#166534;--ybg:#fef3c7;--yfg:#92400e;--rbg:#fee2e2;--rfg:#991b1b;--warnbg:#fffbeb;--warnbd:#fcd34d;--warnfg:#4a3a05;--wa:#16a34a;--red:#b91c1c;--hdrfg:#fff}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0e1716;--fg:#e3efec;--card:#16221f;--line:#2a3b37;--line2:#223230;--inp:#3a4f4a;--acc:#5eead4;--navbg:#0b2a27;--navfg:#a7d9d1;--muted:#8fb0aa;--label:#9fc0ba;--tagbg:#243633;--tagfg:#b6d4ce;--gbg:#12361f;--gfg:#86efac;--ybg:#3b2e0a;--yfg:#fcd34d;--rbg:#451a1a;--rfg:#fca5a5;--warnbg:#2b2410;--warnbd:#7a5f12;--warnfg:#f5e3a8;--wa:#15803d;--red:#b91c1c;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0e1716;--fg:#e3efec;--card:#16221f;--line:#2a3b37;--line2:#223230;--inp:#3a4f4a;--acc:#5eead4;--navbg:#0b2a27;--navfg:#a7d9d1;--muted:#8fb0aa;--label:#9fc0ba;--tagbg:#243633;--tagfg:#b6d4ce;--gbg:#12361f;--gfg:#86efac;--ybg:#3b2e0a;--yfg:#fcd34d;--rbg:#451a1a;--rfg:#fca5a5;--warnbg:#2b2410;--warnbd:#7a5f12;--warnfg:#f5e3a8;--wa:#15803d;--red:#b91c1c;color-scheme:dark}
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Nastaliq Urdu",sans-serif;background:var(--bg);color:var(--fg)}
+:root{--bg:#f4f7f8;--fg:#0f2128;--card:#fff;--line:#dfe7ea;--line2:#ebf0f2;--inp:#c6d3d7;--pri:#0b6e6e;--acc:#0b6e6e;--navbg:#0b2a30;--navfg:#9dbcc2;--nava:#6fdccf;--muted:#5a7379;--label:#3d565c;--tagbg:#e8eff1;--tagfg:#35525a;--gbg:#dcfce7;--gfg:#166534;--ybg:#fef3c7;--yfg:#92400e;--rbg:#fee2e2;--rfg:#991b1b;--warnbg:#fffbeb;--warnbd:#fcd34d;--warnfg:#4a3a05;--wa:#16a34a;--red:#b91c1c;--hdrfg:#fff;--nava:#6fdccf}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0b1519;--fg:#e4eff1;--card:#121f24;--line:#243439;--line2:#1b2a2f;--inp:#35484e;--acc:#5fd6c9;--navbg:#071d21;--navfg:#8fb2b8;--nava:#6fdccf;--muted:#8aa9af;--label:#9bbbc1;--tagbg:#1d2f35;--tagfg:#b3d0d6;--gbg:#12361f;--gfg:#86efac;--ybg:#3b2e0a;--yfg:#fcd34d;--rbg:#451a1a;--rfg:#fca5a5;--warnbg:#2b2410;--warnbd:#7a5f12;--warnfg:#f5e3a8;--wa:#15803d;--red:#b91c1c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1519;--fg:#e4eff1;--card:#121f24;--line:#243439;--line2:#1b2a2f;--inp:#35484e;--acc:#5fd6c9;--navbg:#071d21;--navfg:#8fb2b8;--nava:#6fdccf;--muted:#8aa9af;--label:#9bbbc1;--tagbg:#1d2f35;--tagfg:#b3d0d6;--gbg:#12361f;--gfg:#86efac;--ybg:#3b2e0a;--yfg:#fcd34d;--rbg:#451a1a;--rfg:#fca5a5;--warnbg:#2b2410;--warnbd:#7a5f12;--warnfg:#f5e3a8;--wa:#15803d;--red:#b91c1c;color-scheme:dark}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI Variable","Segoe UI",Roboto,"Noto Nastaliq Urdu",sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;line-height:1.45}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navbg);z-index:60}
 button{font:inherit;cursor:pointer}input,select,textarea{font:inherit;padding:8px 10px;border:1px solid var(--inp);border-radius:8px;width:100%;background:var(--card);color:inherit}
 input[type=checkbox]{width:auto}textarea{min-height:80px;resize:vertical}
 a{color:var(--acc)}
 :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-.btn{background:var(--pri);color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;display:inline-block;text-decoration:none}
+.btn{background:var(--pri);color:#fff;border:0;border-radius:8px;padding:8px 14px;font-weight:600;display:inline-block;text-decoration:none;transition:filter .12s}.btn:hover{filter:brightness(1.1)}
 .btn.sec{background:var(--card);color:var(--acc);border:1px solid var(--acc)}.btn.red{background:var(--red);color:#fff}.btn.wa{background:var(--wa);color:#fff}.btn.sm{padding:4px 9px;font-size:13px}
 .btn:disabled{opacity:.5;cursor:not-allowed}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:10px}.grid>*{min-width:0}
 .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.sp{flex:1}
 .tag{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600;background:var(--tagbg);color:var(--tagfg);white-space:nowrap}
 .tag.g{background:var(--gbg);color:var(--gfg)}.tag.y{background:var(--ybg);color:var(--yfg)}.tag.r{background:var(--rbg);color:var(--rfg)}
-table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line2);font-size:14px;vertical-align:top}th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line2);font-size:14px;vertical-align:top}th{font-size:12.5px;color:var(--muted);font-weight:600}
 .tw{overflow-x:auto}
 .modal{position:fixed;inset:0;background:#0009;display:flex;align-items:center;justify-content:center;padding:12px;z-index:70}
 .modal>div{background:var(--card);color:var(--fg);border-radius:12px;max-width:780px;width:100%;max-height:92vh;overflow:auto;padding:16px}
 label.f{display:block;font-size:12px;font-weight:600;color:var(--label);margin-bottom:3px}
-h2{margin:0 0 10px;font-size:20px}h3{margin:0 0 8px;font-size:16px}
-.nav{display:flex;gap:4px;overflow-x:auto;background:var(--navbg);padding:6px max(10px,env(safe-area-inset-left,0px));position:sticky;top:env(safe-area-inset-top,0px);z-index:10}
-.nav button{background:transparent;color:var(--navfg);border:0;padding:8px 14px;border-radius:8px;font-weight:600;white-space:nowrap}
+h2{margin:0 0 12px;font-size:22px;font-weight:650;letter-spacing:-.015em}h3{margin:0 0 8px;font-size:15.5px;font-weight:650;letter-spacing:-.005em}
+.nav{display:flex;gap:2px;overflow-x:auto;background:var(--navbg);padding:0 max(12px,env(safe-area-inset-left,0px));position:sticky;top:env(safe-area-inset-top,0px);z-index:10}
+.nav button{background:transparent;color:var(--navfg);border:0;padding:12px 13px 10px;border-radius:0;font-weight:600;white-space:nowrap;font-size:14px;transition:color .12s}.nav button:hover{color:#fff}
 .net{align-self:center;color:#fff;font-size:12px;opacity:.9;padding:0 8px;white-space:nowrap}.net.off{background:#b45309;border-radius:99px;padding:2px 10px}
-.nav button.on{background:var(--card);color:var(--acc)}
-.wrap{max-width:1100px;margin:0 auto;padding-block:14px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.muted{color:var(--muted);font-size:13px}.warn{background:var(--warnbg);color:var(--warnfg);border:1px solid var(--warnbd);border-radius:10px;padding:10px;font-size:13px;margin-bottom:12px}
+.nav button.on{background:transparent;color:#fff;box-shadow:inset 0 -3px 0 var(--nava)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:14px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.muted{color:var(--muted);font-size:13px}.warn{background:var(--warnbg);color:var(--warnfg);border:1px solid var(--warnbd);border-left-width:4px;border-radius:8px;padding:9px 12px;font-size:13px;margin-bottom:14px}
 .stat{font-size:26px;font-weight:700;color:var(--acc);font-variant-numeric:tabular-nums}
 .chip{border:1px solid var(--inp);background:var(--card);color:var(--fg);border-radius:99px;padding:4px 10px;font-size:13px}.chip.on{background:var(--pri);color:#fff;border-color:var(--pri)}
 .xg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
@@ -306,7 +306,7 @@ h2{margin:0 0 10px;font-size:20px}h3{margin:0 0 8px;font-size:16px}
 @media (max-width:700px){.odo{grid-template-columns:1fr}.odo>.q:nth-child(odd){border-right:0}.odo>.q:nth-child(n+2){border-top:1px dashed var(--inp);padding-top:10px}}
 .th{background:transparent;border:0;padding:2px 0;display:flex;flex-direction:column;align-items:center;gap:1px;color:var(--fg);min-width:0;border-radius:6px}
 .th .n{font-size:12px;font-weight:700}.th .bd{font-size:9px;min-height:11px;color:var(--muted);font-weight:700}.th.sel .n{color:var(--acc)}
-.brand{color:#fff;font-weight:800;letter-spacing:.02em;align-self:center;padding:0 10px 0 4px;font-size:17px}
+.brand{color:#fff;font-weight:750;letter-spacing:-.01em;align-self:center;padding:0 14px 0 2px;font-size:17px;display:flex;align-items:center;gap:8px}.brand svg{color:var(--nava);flex:none}
 .cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
 .cal.head div{font-size:11px;font-weight:700;color:var(--muted);text-align:center;padding:2px 0}
 .cal .d{background:var(--card);border:1px solid var(--line);border-radius:8px;min-height:96px;padding:4px;display:flex;flex-direction:column;align-items:stretch;gap:2px;text-align:left;color:var(--fg);min-width:0;position:relative;font:inherit;cursor:pointer}
@@ -322,6 +322,31 @@ h2{margin:0 0 10px;font-size:20px}h3{margin:0 0 8px;font-size:16px}
 @media (max-width:700px){.dayc{grid-template-columns:1fr}}
 .cal .xc{font-size:10px;color:var(--red);font-weight:600}
 @media (max-width:600px){.cal .xc{display:none}.cal .d{min-height:50px}.cal .c,.cal .more{display:none}.cal .cnt{display:inline-block}}
+.hd{margin-bottom:14px}.hd h2{margin:0}.hd .muted{font-size:14px;margin-top:2px}
+.strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:14px}
+.strip>div{padding:12px 16px;border-left:1px solid var(--line2);min-width:0}.strip>div:first-child{border-left:0}
+.strip b{display:block;font-size:26px;line-height:1.1;font-weight:650;letter-spacing:-.02em;font-variant-numeric:tabular-nums}.strip span{font-size:12.5px;color:var(--muted);display:block;margin-top:2px}
+.strip>div.hot b{color:var(--acc)}.strip>div.go{cursor:pointer}.strip>div.go:hover{background:var(--line2)}
+@media (max-width:760px){.strip{grid-template-columns:repeat(2,minmax(0,1fr))}.strip>div{border-left:0;border-top:1px solid var(--line2)}.strip>div:nth-child(-n+2){border-top:0}.strip>div:nth-child(even){border-left:1px solid var(--line2)}.strip>div:last-child:nth-child(odd){grid-column:1/-1}}
+.cols{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:0 14px;align-items:start}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.next{display:grid;grid-template-columns:auto 1fr;gap:4px 22px;align-items:center;background:var(--navbg);color:#e9f6f7;border-color:var(--navbg);padding:18px 20px}
+.next .t{font-size:40px;line-height:1;font-weight:650;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:#fff}
+.next .cap{font-size:13px;color:var(--nava);font-weight:600;margin-top:6px}
+.next .who b{font-size:20px;font-weight:650;letter-spacing:-.01em;display:block}.next .who .sub{color:#a9c7cb;font-size:14px;margin-top:2px}
+.next .act{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.next .btn.sec{background:transparent;color:#e9f6f7;border-color:#3b6068}
+.next.none{background:var(--card);color:var(--muted);border-color:var(--line);display:block}
+@media (max-width:520px){.next{grid-template-columns:1fr}.next .t{font-size:34px}}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{display:grid;grid-template-columns:74px 14px 1fr auto;gap:0 10px;align-items:start;padding:9px 0;position:relative}
+.tl li::before{content:"";position:absolute;left:81px;top:0;bottom:0;width:2px;background:var(--line2)}.tl li:first-child::before{top:18px}.tl li:last-child::before{bottom:calc(100% - 18px)}.tl li:only-child::before{display:none}
+.tl .tm{font-weight:650;font-variant-numeric:tabular-nums;font-size:14px;padding-top:1px;text-align:right}
+.tl .dot{width:10px;height:10px;border-radius:99px;background:var(--card);border:2px solid var(--inp);margin:5px 0 0 2px;position:relative;z-index:1}
+.tl li.nx .dot{border-color:var(--acc);background:var(--acc)}.tl li.done .dot{border-color:var(--gfg);background:var(--gfg)}.tl li.done .tm,.tl li.done .bd{color:var(--muted)}
+.tl .bd a{font-weight:600;color:var(--fg);text-decoration:none}.tl .bd a:hover{text-decoration:underline}
+.rl>div{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:center;padding:9px 0;border-top:1px solid var(--line2)}.rl>div:first-of-type{border-top:0}
+.rl .nm{font-weight:600}.rl .meta{font-size:13px;color:var(--muted);grid-column:1}.rl .btn{grid-row:1/3;grid-column:2}
 @media print{.nav,.noprint{display:none!important}}
 `;
 
@@ -578,7 +603,7 @@ function Clinic({ initialDb, onLock }) {
   return (
     <div>
       <div className="nav noprint">
-        <span className="brand">RevDent</span>
+        <span className="brand"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 3.5c-2.4 0-4 2-4 4.6 0 2.2.9 3.6 1.5 5.6.6 2 .5 7.3 2.4 7.3 1.6 0 1.5-4 3.4-4s1.8 4 3.4 4c1.9 0 1.8-5.3 2.4-7.3.6-2 1.5-3.4 1.5-5.6 0-2.6-1.6-4.6-4-4.6-1.6 0-2.3.8-3.3.8S8.8 3.5 7.2 3.5z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" /></svg>RevDent</span>
         <span className={"net " + (online ? "" : "off")} data-testid="net-status" title={online ? "Online" : "No internet. Everything still works and is saved on this device."}>{online ? (sy.on ? (syncSt.state === "synced" ? "● Synced" : syncSt.state === "syncing" ? "● Syncing" : syncSt.state === "error" ? "● Sync problem" : "● Online") : "● Online") : "○ Offline: saving on this device"}</span>
         {TABS.map(([k, l]) => (
           <button key={k} className={tab === k ? "on" : ""} onClick={() => { setTab(k); setOpenPid(null); }}>
@@ -869,6 +894,10 @@ function Today({ db, s, setDb, pById, now, setSend, dueReminders, acDue, recallD
   const today = todayStr();
   const todays = db.appts.filter((a) => a.date === today && a.status !== "cancelled").sort((a, b) => (a.time || "").localeCompare(b.time || ""));
   const pendingConsent = db.appts.filter((a) => a.status === "scheduled" && a.date >= today && a.consentSentAt && !a.consentAt).length;
+  const toMin = (hm) => { const [h, m] = String(hm || "0:0").split(":").map(Number); return (h || 0) * 60 + (m || 0); };
+  const nowMin = now.getHours() * 60 + now.getMinutes();
+  const openToday = todays.filter((a) => a.status === "scheduled");
+  const next = openToday.find((a) => toMin(a.time) >= nowMin - 15) || null;
 
   function doImport() {
     const codes = []; const re = /DENTCARE-(FORM|CONSENT):([A-Za-z0-9_-]+)/g; let m;
@@ -899,35 +928,58 @@ function Today({ db, s, setDb, pById, now, setSend, dueReminders, acDue, recallD
 
   return (
     <div>
-      <h2>Today · {now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</h2>
+      <div className="hd">
+        <h2>Today</h2>
+        <div className="muted">{now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" })}{s.clinic ? " · " + s.clinic : ""}</div>
+      </div>
       {!s.clinic && <div className="warn">First, open <b>Settings</b> and enter your clinic name and WhatsApp number so messages and forms carry them.</div>}
-      <div className="grid" style={{ marginBottom: 12 }}>
-        <div className="card"><div className="stat">{todays.length}</div>Appointments today</div>
-        <div className="card"><div className="stat">{dueReminders.length}</div>Reminders due (next 24h)</div>
-        <div className="card"><div className="stat">{pendingConsent}</div>Consents sent, not signed</div>
-        <div className="card"><div className="stat">{acDue.length}</div>Autoclave tasks due</div>
-        <div className="card" style={{ cursor: "pointer" }} onClick={() => setTab("recalls")}><div className="stat">{recallDue}</div>Recalls ready to send</div>
+      <div className="strip" data-testid="today-strip">
+        <div className="hot"><b>{todays.length}</b><span>Appointments today</span></div>
+        <div><b>{dueReminders.length}</b><span>Reminders due (next 24h)</span></div>
+        <div><b>{pendingConsent}</b><span>Consents sent, not signed</span></div>
+        <div><b>{acDue.length}</b><span>Autoclave tasks due</span></div>
+        <div className="go" onClick={() => setTab("recalls")}><b>{recallDue}</b><span>Recalls ready to send</span></div>
       </div>
 
+      <div className="cols">
+      <div>
+      {next ? (() => { const p = pById[next.patientId]; const mins = toMin(next.time) - (now.getHours() * 60 + now.getMinutes()); return (
+        <div className="next card" data-testid="next-up">
+          <div><div className="t">{fmt12(next.time)}</div><div className="cap">{mins <= 0 ? "Due now" : mins < 60 ? `in ${mins} min` : `in ${Math.floor(mins / 60)} h ${mins % 60 ? (mins % 60) + " min" : ""}`}</div></div>
+          <div className="who"><b>{p ? p.name : "(deleted)"}</b>
+            <div className="sub">{next.reason || "Appointment"}{next.rct && <> <span className="tag y">{rctTag(next)}</span></>}</div>
+            {p && p.phone ? <div className="sub">{p.phone}</div> : null}</div>
+          {p && <div className="act">
+            <button className="btn wa sm" onClick={() => setSend({ mode: "appt", recips: [{ p, a: next }] })}>Remind</button>
+            <button className="btn sec sm" onClick={() => { setTab("patients"); setOpenPid(p.id); }}>Open patient</button></div>}
+        </div>); })() : (
+        <div className="next none card" data-testid="next-up"><b style={{ color: "var(--fg)" }}>{todays.length ? "No more appointments today." : "No appointments today."}</b><div className="muted">Book one from Appointments or the Calendar.</div></div>)}
+
       <div className="card">
-        <div className="row"><h3 className="sp">Reminders due: appointments within the next 24 hours</h3>
+        <h3>Today's schedule</h3>
+        {!todays.length ? <Empty>No appointments today.</Empty> : (
+          <ol className="tl">{todays.map((a) => { const p = pById[a.patientId]; return (
+            <li key={a.id} className={a.status === "done" ? "done" : next && a.id === next.id ? "nx" : ""}>
+              <span className="tm">{fmt12(a.time)}</span><span className="dot" />
+              <div className="bd"><a href="#p" onClick={(e) => { e.preventDefault(); if (p) { setTab("patients"); setOpenPid(p.id); } }}>{p?.name || "(deleted)"}</a>
+                <div className="muted">{a.reason}{a.rct && <> <span className="tag y">{rctTag(a)}</span></>}{a.src === "shared" && a.addedBy ? <> <span className="tag">Added by {a.addedBy}</span></> : null}</div></div>
+              <span className={"tag " + (a.status === "done" ? "g" : "")}>{a.status}</span></li>); })}</ol>)}
+      </div>
+      </div>
+
+      <div>
+      <div className="card">
+        <div className="row"><div className="sp"><h3 style={{ margin: 0 }}>Reminders to send</h3><div className="muted">Appointments within the next 24 hours</div></div>
           <button className="btn wa" disabled={!dueReminders.length}
             onClick={() => setSend({ mode: "appt", recips: dueReminders.map((a) => ({ p: pById[a.patientId], a })) })}>
             Send all due ({dueReminders.length})
           </button></div>
         {!dueReminders.length ? <Empty>Nothing due. Reminders appear here once an appointment is within 24 hours and no reminder has been sent.</Empty> : (
-          <div className="tw"><table><tbody>{dueReminders.map((a) => (
-            <tr key={a.id}><td><b>{pById[a.patientId].name}</b></td><td>{fmtD(a.date)} {fmt12(a.time)}</td><td>{a.reason}{a.rct && <> <span className="tag y">{rctTag(a)}</span></>}</td>
-              <td style={{ textAlign: "right" }}><button className="btn wa sm" onClick={() => setSend({ mode: "appt", recips: [{ p: pById[a.patientId], a }] })}>Send</button></td></tr>))}</tbody></table></div>)}
-        <div className="muted" style={{ marginTop: 6 }}>This list updates while the app is open. It does not send by itself; a person must tap Send in WhatsApp.</div>
-      </div>
-
-      <div className="card">
-        <h3>Today's appointments</h3>
-        {!todays.length ? <Empty>No appointments today.</Empty> : (
-          <div className="tw"><table><tbody>{todays.map((a) => { const p = pById[a.patientId]; return (
-            <tr key={a.id}><td>{fmt12(a.time)}</td><td><a href="#p" onClick={(e) => { e.preventDefault(); if (p) { setTab("patients"); setOpenPid(p.id); } }}>{p?.name || "(deleted)"}</a></td>
-              <td>{a.reason}{a.rct && <> <span className="tag y">{rctTag(a)}</span></>}</td><td><span className={"tag " + (a.status === "done" ? "g" : "")}>{a.status}</span></td></tr>); })}</tbody></table></div>)}
+          <div className="rl" style={{ marginTop: 8 }}>{dueReminders.map((a) => (
+            <div key={a.id}><span className="nm">{pById[a.patientId].name}</span>
+              <span className="meta">{fmtD(a.date)} {fmt12(a.time)} · {a.reason || "Appointment"}{a.rct && <> <span className="tag y">{rctTag(a)}</span></>}</span>
+              <button className="btn wa sm" onClick={() => setSend({ mode: "appt", recips: [{ p: pById[a.patientId], a }] })}>Send</button></div>))}</div>)}
+        <div className="muted" style={{ marginTop: 8 }}>This list updates while the app is open. It does not send by itself; a person must tap Send in WhatsApp.</div>
       </div>
 
       {(db.inbox || []).length > 0 && <div className="card" style={{ cursor: "pointer", borderColor: "var(--yfg)" }} data-testid="inbox-today" onClick={() => setTab("calendar")}><b>{db.inbox.length} patient message{db.inbox.length === 1 ? "" : "s"} to check</b> <span className="muted">(possible cancellations). Open the Calendar to decide.</span></div>}
@@ -947,6 +999,8 @@ function Today({ db, s, setDb, pById, now, setSend, dueReminders, acDue, recallD
         <div className="muted" style={{ marginBottom: 6 }}>When a patient submits a consent or information form, WhatsApp sends you a message containing a code starting with DENTCARE-. Paste one or several messages here.</div>
         <textarea value={paste} onChange={(e) => setPaste(e.target.value)} placeholder="Paste WhatsApp messages here…" />
         <div className="row" style={{ marginTop: 6 }}><button className="btn" disabled={!paste.trim()} onClick={doImport}>Import</button><span className="muted">{res}</span></div>
+      </div>
+      </div>
       </div>
     </div>
   );
@@ -1564,18 +1618,32 @@ function useVoice(lang) {
   const [on, setOn] = useState(false);
   const [interim, setInterim] = useState("");
   const [err, setErr] = useState("");
-  const rec = useRef(null), want = useRef(false), cb = useRef(null);
+  const rec = useRef(null), want = useRef(false), cb = useRef(null), lastTx = useRef({ k: "", t: 0 });
   const stop = () => { want.current = false; try { rec.current && rec.current.stop(); } catch { /* ignore */ } setOn(false); setInterim(""); };
   const start = (onFinal) => {
     if (!SR) { setErr("Voice dictation is not supported in this browser. Use Chrome or Edge."); return; }
     setErr(""); cb.current = onFinal; want.current = true;
     const r = new SR();
-    r.continuous = true; r.interimResults = true; r.lang = lang;
+    // Phones (Android Chrome especially) repeat earlier results in every event when continuous mode is on,
+    // so there each phrase is its own short session. We also keep our own count of finished results and skip repeats.
+    const phone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || "");
+    r.continuous = !phone; r.interimResults = !phone; r.lang = lang;
+    let seen = 0;
+    r.onstart = () => { seen = 0; };
     r.onresult = (e) => {
       let it = "";
-      for (let i = e.resultIndex; i < e.results.length; i++) {
+      for (let i = 0; i < e.results.length; i++) {
         const x = e.results[i];
-        if (x.isFinal) { const tx = x[0].transcript.trim(); if (tx && cb.current) cb.current(tx); } else it += x[0].transcript;
+        if (x.isFinal) {
+          if (i < seen) continue;
+          seen = i + 1;
+          const tx = x[0].transcript.trim(); const key = tx.toLowerCase();
+          const now = Date.now();
+          if (!tx || !cb.current) continue;
+          if (key === lastTx.current.k && now - lastTx.current.t < 2500) continue; // same phrase delivered twice
+          lastTx.current = { k: key, t: now };
+          cb.current(tx);
+        } else it += x[0].transcript;
       }
       setInterim(it);
     };
@@ -1589,8 +1657,8 @@ function useVoice(lang) {
         : e.error === "network" ? "The speech service could not be reached (it needs an internet connection)." : "Voice error: " + e.error);
     };
     r.onend = () => {
-      setInterim("");
-      if (want.current) { try { r.start(); } catch { want.current = false; setOn(false); } } else setOn(false);
+      setInterim(""); seen = 0;
+      if (want.current) setTimeout(() => { if (!want.current) return; try { r.start(); } catch { want.current = false; setOn(false); } }, 250); else setOn(false);
     };
     rec.current = r;
     try { r.start(); setOn(true); } catch (e) { want.current = false; setErr("Could not start dictation: " + e.message); }
