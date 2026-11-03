@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: revdent
+    runtime: docker
+    plan: starter
+    disk: { name: revdent-data, mountPath: /data, sizeGB: 1 }
+    envVars:
+      - { key: DATA_FILE, value: /data/schedules.json }
+      - { key: APP_PASSWORD, sync: false }
+      - { key: WA_VERIFY_TOKEN, sync: false }
+      - { key: WA_APP_SECRET, sync: false }
